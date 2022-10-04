@@ -6,7 +6,7 @@ import logging
 logging.basicConfig(filename='app.log', filemode='a', format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 
 app = Flask(__name__)
-model = load_model('model/best_simplenn.h5', custom_objects={"f1_metric": f1_metric})
+model = load_model('model/best_lstm.h5', custom_objects={"f1_metric": f1_metric})
 
 MAXLEN = 25
 

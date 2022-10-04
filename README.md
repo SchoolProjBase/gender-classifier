@@ -17,8 +17,8 @@ pip install -r requirements.txt
 ```
 
 ## Model Playground
-- [ML](code/gender_classifier_ml.ipynb)
-- [DL](code/gender_classifier_dl.ipynb)
+- [ML](code/gender_classifier_ml.ipynb) (final model excluded from repo)
+- [DL](code/gender_classifier_dl.ipynb) (final model included in repo)
 - [ML-localtest](./local_test.py) `python local_test.py`
 
 
