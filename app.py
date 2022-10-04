@@ -2,11 +2,11 @@ import numpy as np
 from flask import Flask, render_template, request, jsonify, make_response
 from tensorflow.keras.models import load_model
 from genderclassifier.util import *
-import logging
-logging.basicConfig(filename='app.log', filemode='a', format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+#import logging
+#ogging.basicConfig(filename='app.log', filemode='a', format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 
 app = Flask(__name__)
-model = load_model('model/best_lstm.h5', custom_objects={"f1_metric": f1_metric})
+model = load_model('model/final_lstm.h5', custom_objects={"f1_metric": f1_metric})
 
 MAXLEN = 25
 
@@ -19,7 +19,7 @@ def unit_prediction(ipt:str):
         prediction = code_to_label.get(pred_code)
         return prediction
     except Exception as e:
-        logging.error(f"Wrong Input : {ipt} | {e}")
+        print(f"Wrong Input : {ipt} | {e}")
         return "NA (Invalid Name Detected)"
 
 

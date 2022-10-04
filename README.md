@@ -3,12 +3,12 @@ For this quick delivery, I attempted to tackle it by using two approaches with h
 
 ## Deliverable
 - Web App
-    - [Azure](https://gender-classifier-beta.azurewebsites.net/api)
-    - [GCP]()
+    - [Azure](https://gender-classifier-beta.azurewebsites.net) (deprecated for now given availablity on GCP)
+    - [GCP](https://gender-classifier-n7asbfuu5a-as.a.run.app)
 
 - RestAPI
 ```bash
-curl --location --request POST '/api' --header 'Content-Type: application/json' --data-raw '{"First Name": <user input>}'
+curl --location --request POST 'https://gender-classifier-n7asbfuu5a-as.a.run.app/api' --header 'Content-Type: application/json' --data-raw '{"First Name": <user input>}'
 ```
 ## Usage
 ## installation (assumed in a virtual env)
@@ -29,6 +29,6 @@ gunicorn -w 2 app:app -b localhost:8000
 
 ## Docker Build
 ```bash
-docker build --rm -t gender_classifier:v0 . #use buildx build --platform linux/amd64 for mac m1
-docker run -d -p 8080:8000 gender_classifier:v0
+docker build --rm -t gender_classifier:v0 . #use buildx build --platform linux/amd64 for mac m1 in order to deploy to cloud
+docker run -d -p 8000:8080 gender_classifier:v0
 ```
