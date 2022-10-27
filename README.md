@@ -3,8 +3,8 @@ For this quick delivery, I attempted to tackle it by using two approaches with h
 
 ## Deliverable
 - Web App
-    - [Azure](https://gender-classifier-beta.azurewebsites.net) (deprecated for now given availablity on GCP)
-    - [GCP](https://gender-classifier-n7asbfuu5a-as.a.run.app)
+    - [Azure](https://gender-classifier-beta.azurewebsites.net) (stopped)
+    - [GCP](https://gender-classifier-n7asbfuu5a-as.a.run.app) (stopped)
 
 - RestAPI
 ```bash
